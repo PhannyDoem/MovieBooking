@@ -12,10 +12,7 @@ public class AdminMapper {
                 postAdminDto.firstName(),
                 postAdminDto.lastName(),
                 postAdminDto.email(),
-                postAdminDto.password(),
-                postAdminDto.gender(),
-                postAdminDto.phone(),
-                postAdminDto.address()
+                postAdminDto.password()
         );
         admin.setAdminId(0L);
         return admin;
@@ -26,10 +23,7 @@ public class AdminMapper {
                 putAdminDto.firstName(),
                 putAdminDto.lastName(),
                 putAdminDto.email(),
-                putAdminDto.password(),
-                putAdminDto.gender(),
-                putAdminDto.phone(),
-                putAdminDto.address()
+                putAdminDto.password()
         );
         admin.setAdminId(0L);
         return admin;

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PaymentMapper {
-    public Payment postToTheaters(PostPaymentDto postPaymentDto) {
+    public Payment postToPayment(PostPaymentDto postPaymentDto) {
         Payment payment = new Payment(
                 postPaymentDto.amount(),
                 postPaymentDto.paymentDate(),
@@ -18,7 +18,7 @@ public class PaymentMapper {
         return payment;
     }
 
-    public Payment updateTheaters(PutPaymentDto putPaymentDto) {
+    public Payment updatePayment(PutPaymentDto putPaymentDto) {
         Payment payment = new Payment(
                 putPaymentDto.amount(),
                 putPaymentDto.paymentDate(),

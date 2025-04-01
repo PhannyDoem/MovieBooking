@@ -10,33 +10,25 @@ public class Admin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long adminId;
 
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "email")
     private String email;
+    @Column(name = "password")
     private String password;
-    private String gender;
-    private String phone;
-    private String address;
+
 
     public Admin() {}
 
-    public Admin(String firstName, String lastName, String email, String password, String gender, String phone, String address) {
+    public Admin(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.gender = gender;
-        this.phone = phone;
-        this.address = address;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public Long getAdminId() {
         return adminId;
@@ -62,13 +54,7 @@ public class Admin {
         this.firstName = firstName;
     }
 
-    public String getGender() {
-        return gender;
-    }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
     public String getLastName() {
         return lastName;
@@ -86,11 +72,4 @@ public class Admin {
         this.password = password;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }
